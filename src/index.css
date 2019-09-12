@@ -38,3 +38,16 @@ h3{
 .item-desc{
     align-self:center;
 }
+.numberCircle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    padding: auto;
+    background: transparent;
+    border: 2px solid blue;
+    color: blue;
+    text-align: center;
+    font: 20px Arial, sans-serif;
+    
+  }

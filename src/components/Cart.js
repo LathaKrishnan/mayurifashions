@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { removeItem,addQuantity,subtractQuantity} from './actions/cartActions'
+import Recipe from './Recipe'
 class Cart extends Component{
 
     //to remove the item completely
@@ -25,8 +26,9 @@ class Cart extends Component{
                        
                         <li className="collection-item avatar" key={item.id}>
                                     <div className="item-img"> 
-                                        <img src={item.img} alt={item.img}/>
-                                    </div>                         
+                                        <img src={item.img} alt={item.img} className=""/>
+                                    </div>
+                                
                                     <div className="item-desc">
                                         <span className="title">{item.title}</span>
                                         <p>{item.desc}</p>
@@ -39,8 +41,10 @@ class Cart extends Component{
                                             <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item.id)}}>arrow_drop_down</i></Link>
                                         </div>
                                         <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
-                                    </div>                                
-                                </li>                
+                                    </div>
+                                    
+                                </li>
+                         
                     )
                 })
             ):
@@ -55,14 +59,18 @@ class Cart extends Component{
                     <ul className="collection">
                         {addedItems}
                     </ul>
-                </div>      
+                </div> 
+                <Recipe />          
             </div>
        )
     }
 }
+
+
 const mapStateToProps = (state)=>{
     return{
-        items: state.addedItems
+        items: state.addedItems,
+        //addedItems: state.addedItems
     }
 }
 const mapDispatchToProps = (dispatch)=>{

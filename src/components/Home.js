@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import Image from 'react-image-resizer';
+//import Image from 'react-image-resizer'
 import { addToCart } from './actions/cartActions'
 
 class Home extends Component{
@@ -20,7 +20,7 @@ class Home extends Component{
             return(
                 <div className="card" key={item.id} >
                         <div className="card-image" >
-                            <img src={item.img} alt={item.title}/>
+                            <img src={item.img} alt={item.title} style={style.image}/>
                             <br></br>
                             <br></br>
                             <br></br>
