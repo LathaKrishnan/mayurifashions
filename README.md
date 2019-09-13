@@ -6,10 +6,10 @@ http://mayurifashions.surge.sh/
 
 Features
 
-Add and remove items
+* Add and remove items
 
-Remove items
+* Remove items
 
-Edit the quantity of the items in real time
+* Edit the quantity of the items in real time
 
-Calculate automatically the total including the shipping (if chosen)
+* Calculate automatically the total including the shipping (if chosen)
